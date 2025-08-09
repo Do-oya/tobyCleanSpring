@@ -3,9 +3,7 @@ package dooya.splearn.application;
 import dooya.splearn.application.provided.MemberRegister;
 import dooya.splearn.application.required.EmailSender;
 import dooya.splearn.application.required.MemberRepository;
-import dooya.splearn.domain.Member;
-import dooya.splearn.domain.MemberRegisterRequest;
-import dooya.splearn.domain.PasswordEncoder;
+import dooya.splearn.domain.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -18,14 +16,24 @@ public class MemberService implements MemberRegister {
 
     @Override
     public Member register(MemberRegisterRequest registerRequest) {
-        // check
+        checkDuplicateEmail(registerRequest);
 
         Member member = Member.register(registerRequest, passwordEncoder);
 
         memberRepository.save(member);
 
-        emailSender.send(member.getEmail(), "등록을 완료해주세요", "아래 링크를 클릭해서 등록을 완료해주세요");
+        sendWelcomeEmail(member);
 
         return member;
+    }
+
+    private void checkDuplicateEmail(MemberRegisterRequest registerRequest) {
+        if (memberRepository.findByEmail(new Email(registerRequest.email())).isPresent()) {
+            throw new DuplicateEmailException("이미 사용중인 이메일입니다: " + registerRequest.email());
+        }
+    }
+
+    private void sendWelcomeEmail(Member member) {
+        emailSender.send(member.getEmail(), "등록을 완료해주세요", "아래 링크를 클릭해서 등록을 완료해주세요");
     }
 }

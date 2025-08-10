@@ -2,7 +2,7 @@ package dooya.splearn.domain;
 
 public class MemberFixture {
     public static MemberRegisterRequest createMemberRegisterRequest(String invalidEmail) {
-        return new MemberRegisterRequest(invalidEmail, "Dooya", "secret");
+        return new MemberRegisterRequest(invalidEmail, "Dooya", "longSecret");
     }
 
     public static MemberRegisterRequest createMemberRegisterRequest() {

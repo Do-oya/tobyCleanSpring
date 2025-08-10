@@ -2,6 +2,7 @@ package dooya.splearn.application.provided;
 
 import dooya.splearn.SplearnTestConfiguration;
 import dooya.splearn.domain.*;
+import jakarta.validation.ConstraintViolationException;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Import;
@@ -29,5 +30,17 @@ public record MemberRegisterTest(MemberRegister memberRegister) {
 
         assertThatThrownBy(() -> memberRegister.register(MemberFixture.createMemberRegisterRequest()))
                 .isInstanceOf(DuplicateEmailException.class);
+    }
+    
+    @Test
+    void memberRegisterRequestFail() {
+        extracted(new MemberRegisterRequest("invalid@email.com", "dooya", "secret"));
+        extracted(new MemberRegisterRequest("invalid@email.com", "dooya_______________________________", "longSecret"));
+        extracted(new MemberRegisterRequest("invalidemail.com", "dooya", "longSecret"));
+    }
+
+    private void extracted(MemberRegisterRequest invalid) {
+        assertThatThrownBy(() -> memberRegister.register(invalid))
+            .isInstanceOf(ConstraintViolationException.class);
     }
 }

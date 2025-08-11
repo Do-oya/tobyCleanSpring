@@ -1,4 +1,4 @@
-package dooya.splearn.domain;
+package dooya.splearn.domain.shared;
 
 import java.util.regex.Pattern;
 

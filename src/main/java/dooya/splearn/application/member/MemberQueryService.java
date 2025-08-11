@@ -1,8 +1,8 @@
-package dooya.splearn.application;
+package dooya.splearn.application.member;
 
-import dooya.splearn.application.provided.MemberFinder;
-import dooya.splearn.application.required.MemberRepository;
-import dooya.splearn.domain.Member;
+import dooya.splearn.application.member.provided.MemberFinder;
+import dooya.splearn.application.member.required.MemberRepository;
+import dooya.splearn.domain.member.Member;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

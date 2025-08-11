@@ -1,10 +1,9 @@
-package dooya.splearn.application.provided;
+package dooya.splearn.application.member.provided;
 
 import dooya.splearn.SplearnTestConfiguration;
-import dooya.splearn.domain.Member;
-import dooya.splearn.domain.MemberFixture;
+import dooya.splearn.domain.member.Member;
+import dooya.splearn.domain.member.MemberFixture;
 import jakarta.persistence.EntityManager;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Import;

@@ -1,8 +1,8 @@
 package dooya.splearn;
 
-import dooya.splearn.application.required.EmailSender;
-import dooya.splearn.domain.MemberFixture;
-import dooya.splearn.domain.PasswordEncoder;
+import dooya.splearn.application.member.required.EmailSender;
+import dooya.splearn.domain.member.MemberFixture;
+import dooya.splearn.domain.member.PasswordEncoder;
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Bean;
 

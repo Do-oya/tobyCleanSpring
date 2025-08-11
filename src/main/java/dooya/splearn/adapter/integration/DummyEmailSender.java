@@ -1,7 +1,7 @@
 package dooya.splearn.adapter.integration;
 
-import dooya.splearn.application.required.EmailSender;
-import dooya.splearn.domain.Email;
+import dooya.splearn.application.member.required.EmailSender;
+import dooya.splearn.domain.shared.Email;
 import org.springframework.context.annotation.Fallback;
 import org.springframework.stereotype.Component;
 

@@ -1,4 +1,4 @@
-package dooya.splearn.domain;
+package dooya.splearn.domain.member;
 
 public class MemberFixture {
     public static MemberRegisterRequest createMemberRegisterRequest(String invalidEmail) {

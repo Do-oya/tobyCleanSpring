@@ -1,7 +1,7 @@
-package dooya.splearn.application.provided;
+package dooya.splearn.application.member.provided;
 
 import dooya.splearn.SplearnTestConfiguration;
-import dooya.splearn.domain.*;
+import dooya.splearn.domain.member.*;
 import jakarta.persistence.EntityManager;
 import jakarta.validation.ConstraintViolationException;
 import org.junit.jupiter.api.Test;

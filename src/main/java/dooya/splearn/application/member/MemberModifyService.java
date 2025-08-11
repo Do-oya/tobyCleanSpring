@@ -1,10 +1,14 @@
-package dooya.splearn.application;
+package dooya.splearn.application.member;
 
-import dooya.splearn.application.provided.MemberFinder;
-import dooya.splearn.application.provided.MemberRegister;
-import dooya.splearn.application.required.EmailSender;
-import dooya.splearn.application.required.MemberRepository;
-import dooya.splearn.domain.*;
+import dooya.splearn.application.member.provided.MemberFinder;
+import dooya.splearn.application.member.provided.MemberRegister;
+import dooya.splearn.application.member.required.EmailSender;
+import dooya.splearn.application.member.required.MemberRepository;
+import dooya.splearn.domain.member.DuplicateEmailException;
+import dooya.splearn.domain.member.Member;
+import dooya.splearn.domain.member.MemberRegisterRequest;
+import dooya.splearn.domain.member.PasswordEncoder;
+import dooya.splearn.domain.shared.Email;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

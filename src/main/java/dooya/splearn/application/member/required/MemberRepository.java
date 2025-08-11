@@ -1,7 +1,7 @@
-package dooya.splearn.application.required;
+package dooya.splearn.application.member.required;
 
-import dooya.splearn.domain.Email;
-import dooya.splearn.domain.Member;
+import dooya.splearn.domain.shared.Email;
+import dooya.splearn.domain.member.Member;
 import org.springframework.data.repository.Repository;
 
 import java.util.Optional;

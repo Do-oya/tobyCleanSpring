@@ -1,6 +1,6 @@
 package dooya.splearn.adapter.security;
 
-import dooya.splearn.domain.PasswordEncoder;
+import dooya.splearn.domain.member.PasswordEncoder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
 

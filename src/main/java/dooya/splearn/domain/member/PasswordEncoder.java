@@ -1,4 +1,4 @@
-package dooya.splearn.domain;
+package dooya.splearn.domain.member;
 
 public interface PasswordEncoder {
     String encode(String password);

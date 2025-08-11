@@ -1,4 +1,4 @@
-package dooya.splearn.domain;
+package dooya.splearn.domain.member;
 
 public class DuplicateEmailException extends RuntimeException {
     public DuplicateEmailException(String message) {

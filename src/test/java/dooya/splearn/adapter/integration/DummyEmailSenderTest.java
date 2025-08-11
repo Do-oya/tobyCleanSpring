@@ -1,6 +1,6 @@
 package dooya.splearn.adapter.integration;
 
-import dooya.splearn.domain.Email;
+import dooya.splearn.domain.shared.Email;
 import org.junit.jupiter.api.Test;
 import org.junitpioneer.jupiter.StdIo;
 import org.junitpioneer.jupiter.StdOut;

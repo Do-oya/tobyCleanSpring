@@ -1,6 +1,6 @@
-package dooya.splearn.application.required;
+package dooya.splearn.application.member.required;
 
-import dooya.splearn.domain.Email;
+import dooya.splearn.domain.shared.Email;
 /**
  * 이메일을 발송한다
  */

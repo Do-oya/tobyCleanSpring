@@ -1,6 +1,6 @@
-package dooya.splearn.application.provided;
+package dooya.splearn.application.member.provided;
 
-import dooya.splearn.domain.Member;
+import dooya.splearn.domain.member.Member;
 
 /**
  * 회원을 조회한다

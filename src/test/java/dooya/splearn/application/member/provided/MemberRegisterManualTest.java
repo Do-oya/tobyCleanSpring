@@ -1,12 +1,12 @@
-//package dooya.splearn.application.provided;
+//package dooya.splearn.application.member.provided;
 //
-//import dooya.splearn.application.MemberModifyService;
-//import dooya.splearn.application.required.EmailSender;
-//import dooya.splearn.application.required.MemberRepository;
-//import dooya.splearn.domain.Email;
-//import dooya.splearn.domain.Member;
-//import dooya.splearn.domain.MemberFixture;
-//import dooya.splearn.domain.MemberStatus;
+//import dooya.splearn.application.member.MemberModifyService;
+//import dooya.splearn.application.member.required.EmailSender;
+//import dooya.splearn.application.member.required.MemberRepository;
+//import dooya.splearn.domain.shared.Email;
+//import dooya.splearn.domain.member.Member;
+//import dooya.splearn.domain.member.MemberFixture;
+//import dooya.splearn.domain.member.MemberStatus;
 //import org.junit.jupiter.api.Test;
 //import org.mockito.Mockito;
 //import org.springframework.test.util.ReflectionTestUtils;

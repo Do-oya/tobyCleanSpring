@@ -1,6 +1,7 @@
 package dooya.splearn.domain.member;
 
 import dooya.splearn.domain.AbstractEntity;
+import jakarta.persistence.Column;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import lombok.Getter;
@@ -17,7 +18,6 @@ import static org.springframework.util.Assert.*;
 @ToString(callSuper = true)
 @NoArgsConstructor(access = lombok.AccessLevel.PROTECTED)
 public class MemberDetail extends AbstractEntity {
-    @Embedded
     private Profile profile;
 
     private String introduction;

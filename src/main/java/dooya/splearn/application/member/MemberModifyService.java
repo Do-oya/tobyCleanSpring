@@ -4,10 +4,7 @@ import dooya.splearn.application.member.provided.MemberFinder;
 import dooya.splearn.application.member.provided.MemberRegister;
 import dooya.splearn.application.member.required.EmailSender;
 import dooya.splearn.application.member.required.MemberRepository;
-import dooya.splearn.domain.member.DuplicateEmailException;
-import dooya.splearn.domain.member.Member;
-import dooya.splearn.domain.member.MemberRegisterRequest;
-import dooya.splearn.domain.member.PasswordEncoder;
+import dooya.splearn.domain.member.*;
 import dooya.splearn.domain.shared.Email;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -42,6 +39,24 @@ public class MemberModifyService implements MemberRegister {
         Member member = memberFinder.find(memberId);
 
         member.activate();
+
+        return memberRepository.save(member);
+    }
+
+    @Override
+    public Member deactivate(Long memberId) {
+        Member member = memberFinder.find(memberId);
+
+        member.deactivate();
+
+        return memberRepository.save(member);
+    }
+
+    @Override
+    public Member updateInfo(Long memberId, MemberInfoUpdateRequest memberInfoUpdateRequest) {
+        Member member = memberFinder.find(memberId);
+
+        member.updateInfo(memberInfoUpdateRequest);
 
         return memberRepository.save(member);
     }
